@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于作者</title>
+	<style>
+		body {
+		    margin: 0;
+		    padding: 0;
+		}
+		
+		/* Top Section Styles */
+		.top-section {
+		    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+		    padding: 20px;
+		    text-align: center;
+		    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+			height: 100px;/* Increased shadow below the top section */
+		}
+		
+		.transparent-box {
+		    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white for better shadow visibility */
+		    padding: 20px;
+		    display: inline-block; /* Center the content */
+		}
+		
+		.transparent-box h1 {
+		    font-family: '楷体', cursive; 
+			text-align: center;
+			font-size: 30px;/* Add KaiTi font to the 'h1' element */
+		}
+		
+		/* Main Section Styles */
+		.main-section {
+		    /* Add your styles for the main content */
+		}
+		
+		/* Bottom Section Styles */
+		.bottom-section {
+		    background-image: url(img/netbackground.png);
+		    background-size: cover;
+		    background-position: bottom;
+		    position: fixed;
+		    bottom: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    z-index: -1; /* To place it behind other content */
+		}
+.back-button {
+    position: absolute;
+    top: 15px; /* 距离顶部的距离 */
+    left: 15px; /* 距离左侧的距离 */
+    background-color: #b170b3; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #ffee00; /* 鼠标悬停时的背景颜色 */
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* 初始颜色为黑色 */
+  z-index: 9999;
+  animation: fadeOut 1s ease-in-out forwards; /* 3秒钟的淡出动画，forwards使动画结束时保持最终状态 */
+}
+.bottom-section {
+  background-image: url(img/netbackground.png);
+  background-size: cover;
+  background-position: bottom;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 保持在覆盖层之后 */
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* 开始时完全不透明 */
+  }
+  80%{
+	  opacity: 1;
+  }
+  100% {
+    opacity: 0; /* 结束时完全透明 */
+	z-index: -1;
+  }
+}
+	</style>
+</head>
+<body>
+<div class="overlay"></div>
+
+    <!-- Top Section -->
+    <div class="top-section">
+        <div class="transparent-box">
+            <h1>关于作者</h1>
+			<button class="back-button" onclick="goBack()">返回</button>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main-section">
+        <p class="aboutwrsmain">内容</p>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <!-- Background Image -->
+    </div>
+
+    <script>
+		function goBack() {
+		    window.location.href = "hub1.html"; // 当点击按钮时，跳转到hub1.html页面
+		}
+	</script>
+</body>
+</html>
